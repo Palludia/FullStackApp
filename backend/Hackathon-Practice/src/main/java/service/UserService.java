@@ -31,6 +31,7 @@ public class UserService {
         User user = new User();
         user.setUsername(req.getUsername());
         user.setPassword(passwordEncoder.encode(req.getPassword()));
+        user.setEmail(req.getEmail());
 
         return userRepository.save(user);
     }
